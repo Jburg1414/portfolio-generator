@@ -17,7 +17,7 @@ const generateProjects = (projectArr) => {
     <h2 class="text-dark bg-primary p-2 display-inline-block">Work</h2>
     <div class="flex-row justify-space-between">
       
-      ${projectsArr
+      ${projectArr
         .filter(({ feature }) => feature)
         .map(({ name, description, languages, link }) => {
           return `
@@ -34,7 +34,7 @@ const generateProjects = (projectArr) => {
         })
         .join("")}
       
-      ${projectsArr
+      ${projectArr
         .filter(({ feature }) => !feature)
         .map(({ name, description, languages, link }) => {
           return `
